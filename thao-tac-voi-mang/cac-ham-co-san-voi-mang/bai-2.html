@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+    let numb = prompt('xin moi nhap day so');
+    let str = numb.toString();
+    let result = [str[0]];
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] % 2 ===0) {
+            result.push('-', str[i]);
+        } else {
+            result.push(str[i]);
+        }
+    }
+    console.log(result.join(''));
+</script>
+
+</body>
+</html>
