@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<label><input type="text" value="" id="eng"></label>
+<button type="button" onclick="changeVN()">Translate</button>
+<label><input type="text" value="" id="vne"></label>
+
+<script>
+    let english = [
+        'Good',
+        'Strong',
+        'Love',
+        'Perfect'
+    ];
+
+    let vietnamese = [
+        'Tốt',
+        'Khỏe mạnh',
+        'Iu Iu',
+        'Hoàn hảo'
+    ];
+
+
+    function changeVN() {
+        let status = '';
+        for (let i = 0; i < english.length; i++) {
+            if (document.getElementById('eng').value === english[i]) {
+                status = i;
+            }
+        }
+        if (status === '') {
+            alert("Khong co");
+        } else {
+            document.getElementById('vne').value = vietnamese[status];
+        }
+    }
+</script>
+</body>
+</html>
