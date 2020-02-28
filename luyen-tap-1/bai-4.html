@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4</title>
+</head>
+<body>
+<script>
+    let numb = [31, -8, 28, -10, 10, 105, 4, 20, 40];
+    let first = 0;
+    let last = numb.length - 1;
+
+    while (first < last) {
+        let x = numb[first];
+        numb[first] = numb[last];
+        numb[last] = x;
+        first++;
+        last--;
+    }
+    document.write('day so dao nguoc la ' + numb);
+</script>
+</body>
+</html>

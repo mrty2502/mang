@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 6</title>
+</head>
+<body>
+<script>
+    let numb = [31, -8, 28, -10, -30, 15, -4, 20, 40, 56];
+    let V = +prompt('Please enter V in here!');
+    let status = false;
+    for (i = 0; i < numb.length; i++) {
+        if (numb[i] === V) {
+            status = true;
+        }
+    }
+    if (status === true) {
+        alert('V is in the array');
+    } else {
+        alert('V is not in the array');
+    }
+    document.write('The array is: ' + numb);
+
+</script>
+</body>
+</html>
