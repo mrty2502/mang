@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea On Typing </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div align="center">
+        <h2>TYPE ANYTHING SLOWLY</h2>
+    </div>
+    <div align="center">
+        <input type="text" id="inputtext" onkeypress="inputText()">
+    </div>
+</div>
+
+<script>
+    let string = "tôi là đồ ngốc!";
+    let arr = [];
+    let count = -1;
+    let output = "";
+    for (let i = 0; i < string.length; i++) {
+        arr.push(string[i]);
+    }
+
+    function inputText() {
+        count += 1;
+        output += arr[count];
+        if (count === arr.length) {
+            count = -1;
+            output = "";
+        }
+        document.getElementById("inputtext").value = "";
+        document.getElementById("inputtext").value = output;
+    }
+</script>
+</body>
+</html>
